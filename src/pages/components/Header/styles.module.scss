@@ -1,0 +1,156 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+  background: #00000000;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background-color 1s ease;
+  z-index: 899;
+
+  height: 81px;
+}
+
+.scrolled {
+  background: none;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 5px 5px #0000006c;
+
+
+}
+
+.logo {
+  width: 112px;
+  object-fit: cover;
+}
+
+.progressBar {
+  height: 2px;
+  position: fixed;
+  top: 81px;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+  z-index: 999;
+
+  .progressIndicator {
+    height: 100%;
+    background-color: #808080;
+  }
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navItem {
+  color: #808080;
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 20px;
+
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.logoText {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 700;
+  font-size: 24px;
+}
+
+// Switch language
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #292929;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url("/br-flag.png");
+  background-position: center;
+  background-size: cover;
+
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #363636;
+}
+
+input:checked+.slider:before {
+  background-image: url("/us-flag.png");
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #363636;
+
+
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.flag {
+  width: 35px;
+  height: 22px;
+}

@@ -1,0 +1,36 @@
+.Container {
+  position: relative;
+  overflow: hidden; // Para garantir que as imagens não ultrapassem o contêiner
+
+
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  background: rgb(8, 8, 8);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(20, 20, 20) 100%);
+}
+
+.SliderImage {
+  height: 80px;
+  width: auto;
+
+  max-width: 18rem;
+  display: block;
+  margin: auto;
+  padding: 0 5%;
+}
+
+
+.stackItem {
+  fill: #808080;
+  height: 90px;
+  width: 90px;
+
+  &:hover {
+    fill: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
